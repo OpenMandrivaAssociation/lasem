@@ -80,7 +80,7 @@ This package contains the development files for %{name}.
 %{_libdir}/girepository-1.0/Lasem-%{api}.typelib
 
 %files -n %{devname}
-%{_includedir}/%{name}
+%{_includedir}/%{name}-%{api}
 %{_libdir}/pkgconfig/*.pc
 %{_libdir}/lib%{name}-%{api}.so
 %{_datadir}/gir-1.0/Lasem-%{api}.gir
