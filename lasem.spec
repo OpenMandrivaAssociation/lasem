@@ -67,9 +67,9 @@ This package contains the development files for %{name}.
 %install
 %makeinstall_std
 
-%find_lang %{name}
+%find_lang %{name}-%{api}
 
-%files -f %{name}.lang
+%files -f %{name}-%{api}.lang
 %doc AUTHORS COPYING ChangeLog INSTALL NEWS README
 %{_bindir}/lasemtest
 %{_bindir}/lasemrender
