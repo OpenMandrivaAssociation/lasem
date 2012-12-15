@@ -66,7 +66,7 @@ This package contains the development files for %{name}.
 
 %install
 %makeinstall_std
-
+rm -fr %{buildroot}/usr/doc/
 %find_lang %{name}-%{api}
 
 %files -f %{name}-%{api}.lang
@@ -84,4 +84,5 @@ This package contains the development files for %{name}.
 %{_libdir}/pkgconfig/*.pc
 %{_libdir}/lib%{name}-%{api}.so
 %{_datadir}/gir-1.0/Lasem-%{api}.gir
+%{_datadir}/gtk-doc/html/lasem-%{api}
 
