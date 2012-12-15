@@ -1,7 +1,9 @@
 %define url_ver %(echo %{version}|cut -d. -f1,2)
 
-%define	major	0
-%define libname	%mklibname %{name} %{major}
+%define	api	0.4
+%define	major	4
+%define libname	%mklibname %{name} %{api} %{major}
+%define girname	%mklibname %{name}-gir %{api}
 %define devname	%mklibname %{name} -d
 
 Summary:	SVG and Mathml rendering library
@@ -37,10 +39,18 @@ Group:		System/Libraries
 %description -n %{libname}
 SVG and Mathml rendering library.
 
+%package -n %{girname}
+Summary:	GObject Introspection interface library for %{name}
+Group:		System/Libraries
+
+%description -n %{girname}
+GObject Introspection interface library for %{name}.
+
 %package -n %{devname}
 Summary:	Development files for %{name}
 Group:		Development/C
 Requires:	%{libname} = %{version}-%{release}
+Requires:	%{girname} = %{version}-%{release}
 
 %description -n %{devname}
 This package contains the development files for %{name}.
@@ -65,10 +75,14 @@ This package contains the development files for %{name}.
 %{_bindir}/lasemrender
 
 %files -n %{libname}
-%{_libdir}/lib%{name}.so.*
+%{_libdir}/lib%{name}-%{api}.so.*
+
+%files -n %{girname}
+%{_libdir}/girepository-1.0/Lasem-%{api}.typelib
 
 %files -n %{devname}
 %{_includedir}/%{name}
-%{_libdir}/pkgconfig/%{name}.pc
-%{_libdir}/lib%{name}.so
+%{_libdir}/pkgconfig/*.pc
+%{_libdir}/lib%{name}-%{api}.so
+%{_datadir}/gir-1.0/Lasem-%{api}.gir
 
