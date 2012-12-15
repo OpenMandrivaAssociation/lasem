@@ -71,8 +71,7 @@ This package contains the development files for %{name}.
 
 %files -f %{name}-%{api}.lang
 %doc AUTHORS COPYING ChangeLog INSTALL NEWS README
-%{_bindir}/lasemtest
-%{_bindir}/lasemrender
+%{_bindir}/lasem-render*
 
 %files -n %{libname}
 %{_libdir}/lib%{name}-%{api}.so.*
