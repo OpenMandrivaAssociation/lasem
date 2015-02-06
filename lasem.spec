@@ -9,7 +9,7 @@
 Summary:	SVG and Mathml rendering library
 Name:		lasem
 Version:	0.4.1
-Release:	1
+Release:	2
 Group:		Graphics
 License:	GPLv2
 Url:		http://blogs.gnome.org/emmanuel/category/lasem
