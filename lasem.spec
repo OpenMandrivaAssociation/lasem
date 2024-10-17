@@ -12,7 +12,7 @@ Version:	0.4.1
 Release:	2
 Group:		Graphics
 License:	GPLv2
-Url:		http://blogs.gnome.org/emmanuel/category/lasem
+Url:		https://blogs.gnome.org/emmanuel/category/lasem
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/lasem/%{url_ver}/%{name}-%{version}.tar.xz
 
 BuildRequires:	flex
